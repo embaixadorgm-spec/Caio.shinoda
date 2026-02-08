@@ -1,10 +1,14 @@
 import requests
 import math
+import os # <-- Linha nova
+import telebot # <-- Linha nova
 
 # --- CONFIGURAÇÕES ---
-API_KEY = "SUA_API_KEY_AQUI"
-TOKEN_TELEGRAM = "TOKEN_DO_TELEGRAM"
-CHAT_ID = "SEU_CHAT_ID"
+# O código agora lê automaticamente do Render.com:
+API_KEY = os.environ.get("API_KEY") 
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+CHAT_ID = os.environ.get("CHAT_ID")
+bot = telebot.TeleBot(TELEGRAM_TOKEN) # <-- Inicializa o bot aqui
 
 def calcular_poisson(media, x):
     return (math.exp(-media) * (media**x)) / math.factorial(x)
