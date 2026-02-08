@@ -2,9 +2,9 @@ import requests
 import math
 
 # --- CONFIGURAÇÕES ---
-API_KEY = "112848572b1102cebef92682f44b128f"
-TOKEN_TELEGRAM = "8510560437:AAHRlad45QmV166g5Uz6kI8C5xj5W3TFJzU"
-CHAT_ID = "5869828153"
+API_KEY = "SUA_API_KEY_AQUI"
+TOKEN_TELEGRAM = "TOKEN_DO_TELEGRAM"
+CHAT_ID = "SEU_CHAT_ID"
 
 def calcular_poisson(media, x):
     return (math.exp(-media) * (media**x)) / math.factorial(x)
